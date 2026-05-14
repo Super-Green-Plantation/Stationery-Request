@@ -7,6 +7,10 @@ const ITEMS = [
     { id: 'Mug', label: 'Mug', icon: '☕', hasSize: false },
     { id: 'Umbrella', label: 'Umbrella', icon: '☂️', hasSize: false },
     { id: 'Stationery', label: 'Stationery', icon: '✏️', hasSize: false },
+    { id: 'Saree', label: 'Saree', icon: '✏️', hasSize: false },
+    { id: 'Saree Pin', label: 'Saree Pin', icon: '✏️', hasSize: false },
+    { id: 'Tie', label: 'Tie', icon: '✏️', hasSize: false },
+    { id: 'Cap', label: 'Cap', icon: '✏️', hasSize: false },
     // Add more items here
 ];
 
