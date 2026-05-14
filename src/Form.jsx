@@ -128,7 +128,8 @@ export default function MerchandiseRequestForm() {
                         </span>
                     </div>
                     <h1 style={{ fontSize: 26, fontWeight: 600, color: '#f9fafb', margin: 0, lineHeight: 1.2 }}>
-                        Merchandise Request
+                        Stationery Request
+
                     </h1>
                     <p style={{ fontSize: 13, color: '#6b7280', marginTop: 6 }}>
                         Select items and submit — your request goes directly to the sheet.
@@ -209,7 +210,7 @@ export default function MerchandiseRequestForm() {
                                         }}
                                     >
                                         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                                            <span style={{ fontSize: 20 }}>{item.icon}</span>
+                                            {/* <span style={{ fontSize: 20 }}>{item.icon}</span> */}
                                             <span style={{ fontSize: 14, color: selected ? '#86efac' : '#9ca3af', fontWeight: selected ? 500 : 400 }}>
                                                 {item.label}
                                             </span>
