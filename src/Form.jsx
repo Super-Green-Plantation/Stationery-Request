@@ -31,7 +31,7 @@ const BRANCHES = ['Head Office',
 // selectedItems shape: { [itemId]: { qty: number, size: string } }
 
 export default function MerchandiseRequestForm() {
-    const [empNo, setEmpNo] = useState('');
+    // const [empNo, setEmpNo] = useState('');
     const [empName, setEmpName] = useState('');
     const [branch, setBranch] = useState('');
     const [selectedItems, setSelectedItems] = useState({});
@@ -64,7 +64,7 @@ export default function MerchandiseRequestForm() {
     const totalItems = Object.values(selectedItems).reduce((s, i) => s + i.qty, 0);
 
     const handleSubmit = async () => {
-        if (!empNo || !empName || !branch) { setStatus('error'); return; }
+        if (!empName || !branch) { setStatus('error'); return; }
         if (Object.keys(selectedItems).length === 0) { setStatus('error'); return; }
 
         const missingSizes = ITEMS
@@ -81,7 +81,7 @@ export default function MerchandiseRequestForm() {
             .filter(i => selectedItems[i.id])
             .map(i => ({
                 date,
-                empNo,
+                // empNo,
                 empName,
                 branch,
                 item: i.id,
@@ -98,7 +98,7 @@ export default function MerchandiseRequestForm() {
                 body: JSON.stringify(rows),
             });
             setStatus('success');
-            setEmpNo(''); setEmpName(''); setBranch('');
+            // setEmpNo(''); setEmpName(''); setBranch('');
             setSelectedItems({}); setNotes('');
         } catch {
             setStatus('error');
@@ -150,7 +150,7 @@ export default function MerchandiseRequestForm() {
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                         {[
-                            { placeholder: 'Employee number', value: empNo, set: setEmpNo, mono: true },
+                            // { placeholder: 'Employee number', value: empNo, set: setEmpNo, mono: true },
                             { placeholder: 'Full name', value: empName, set: setEmpName },
                         ].map(({ placeholder, value, set, mono }) => (
                             <input
